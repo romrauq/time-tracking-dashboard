@@ -21,45 +21,173 @@
 	src: url("../fonts/Rubik-VariableFont_wght.ttf");
 }
 body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--Very-Dark-Blue);
 }
 main {
+	font-family: Rubik;
+	color: white;
+	font-size: 18px;
+	width: fit-content;
+	display: flex;
+	gap: 15px;
+	margin: auto 0;
 }
 .flex-container-column {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--Dark-Blue);
+	border-radius: 10px;
 }
 .top-section {
+	width: 170px;
+	padding: 30px 30px 40px;
+	background-color: var(--Blue);
+	border-radius: 10px;
+}
+.profile-image {
+	width: 50px;
+	border: 2px solid white;
+	border-radius: 50%;
+	margin: 0 0 20px 0;
 }
 .accent-text {
+	font-size: 12px;
+	margin: 0 0 5px 0;
 }
 .heading-text {
+	font-weight: 300;
+	width: 80px;
 }
 .bottom-section {
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	background-color: var(--Dark-Blue);
+	border-radius: 0 0 10px 10px;
 }
-.button-light-text {
+.button-text {
+	color: var(--Pale-Blue);
+	font-size: 12px;
+	width: fit-content;
+	background-color: var(--Dark-Blue);
+	border: none;
+	cursor: pointer;
+	transition: 0.7s;
 }
-.button-white-text {
+.button-text:hover {
+	color: white;
+	font-weight: 700;
+}
+.button-selected {
+	color: white;
+	font-weight: 700;
 }
 .grid-container-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 15px;
 }
 .grid-item {
+	height: fit-content;
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	border-radius: 15px;
+	margin: 0;
 }
-.image-highlight-section {
+.work-grid {
+	background-color: orange;
+}
+.play-grid {
+	background-color: var(--Soft-Blue);
+}
+.study-grid {
+	background-color: var(--Light-Red);
+}
+.exercise-grid {
+	background-color: var(--Lime-Green);
+}
+.social-grid {
+	background-color: var(--Violet);
+}
+.self-care-grid {
+	background-color: var(--Soft-Orange);
+}
+.image-highlight {
+	height: 40px;
+	border-radius: 10px 10px 0 0;
+	background-position: right;
+	background-repeat: no-repeat;
+}
+.work-highlight {
+	background-color: orange;
+	background-image: url("../images/icon-work.svg");
+}
+.play-highlight {
+	background-color: var(--Soft-Blue);
+	background-image: url("../images/icon-play.svg");
+}
+.study-highlight {
+	background-color: var(--Light-Red);
+	background-image: url("../images/icon-study.svg");
+}
+.exercise-highlight {
+	background-color: var(--Lime-Green);
+	background-image: url("../images/icon-exercise.svg");
+}
+.social-highlight {
+	background-color: var(--Violet);
+	background-image: url("../images/icon-social.svg");
+}
+.self-care-highlight {
+	background-color: var(--Soft-Orange);
+	background-image: url("../images/icon-self-care.svg");
 }
 .details-section {
+	padding: 20px;
+	width: 170px;
+	border-radius: 10px;
+	background-color: var(--Dark-Blue);
+	cursor: pointer;
+	transition: 0.7s;
+}
+.details-section:hover {
+	background-color: var(--Desaturated-Blue);
 }
 .top-details-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 0 20px 0;
 }
 .small-white-text {
+	font-size: 12px;
+	font-weight: 500;
 }
 .ellipsis-icon {
+	width: 15px;
 }
 .hour-text {
+	font-size: 32px;
+	font-weight: 300;
+	margin: 0 0 5px 0;
 }
 .small-light-text {
+	color: var(--Pale-Blue);
+	font-size: 12px;
+	font-weight: 200;
 }
 .attribution {
+	color: white;
 	font-size: 11px;
 	text-align: center;
 }
 .attribution a {
-	color: hsl(228, 45%, 44%);
+	color: var(--Soft-Orange);
 }
