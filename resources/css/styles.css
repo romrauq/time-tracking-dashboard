@@ -191,3 +191,55 @@ main {
 .attribution a {
 	color: var(--Soft-Orange);
 }
+@media (max-width: 475px) {
+	main {
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		margin: 30px 0;
+	}
+	.flex-container-column {
+		display: flex;
+		flex-direction: column;
+		background-color: var(--Dark-Blue);
+		border-radius: 10px;
+	}
+	.top-section {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		width: 100%;
+		padding: 30px;
+		background-color: var(--Blue);
+		border-radius: 10px;
+	}
+	.profile-image {
+		margin: 0;
+	}
+	.accent-text {
+		font-size: 12px;
+	}
+	.heading-text {
+		font-weight: 300;
+		width: 100%;
+	}
+	.bottom-section {
+		padding: 20px 30px;
+		flex-direction: row;
+		justify-content: space-around;
+		gap: 0;
+	}
+	.grid-container-row {
+		display: grid;
+		grid-template-columns: 1fr;
+		width: 100%;
+	}
+	.grid-item {
+		width: 100%;
+	}
+	.details-section {
+		width: 100%;
+		border-radius: 10px;
+	}
+}
