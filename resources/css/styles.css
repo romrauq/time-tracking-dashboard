@@ -179,7 +179,7 @@ main {
 	font-weight: 300;
 	margin: 0 0 5px 0;
 }
-.small-light-text {
+.previous-text {
 	color: var(--Pale-Blue);
 	font-size: 12px;
 	font-weight: 200;
@@ -248,7 +248,7 @@ main {
 		align-items: center;
 		justify-content: space-between;
 	}
-	.small-light-text {
+	.previous-text {
 		font-size: 16px;
 	}
 }
