@@ -45,7 +45,7 @@ main {
 }
 .top-section {
 	width: 170px;
-	padding: 30px 30px 40px;
+	padding: 25px 30px 60px;
 	background-color: var(--Blue);
 	border-radius: 10px;
 }
@@ -53,9 +53,10 @@ main {
 	width: 50px;
 	border: 2px solid white;
 	border-radius: 50%;
-	margin: 0 0 20px 0;
+	margin: 0 0 10px 0;
 }
 .accent-text {
+	color: var(--Pale-Blue);
 	font-size: 12px;
 	margin: 0 0 5px 0;
 }
