@@ -2,6 +2,8 @@ const daily_button = document.getElementById("daily-period-button");
 const weekly_button = document.getElementById("weekly-period-button");
 const monthly_button = document.getElementById("monthly-period-button");
 
+const buttons = [daily_button, weekly_button, monthly_button]; // Store buttons in an array
+
 // Fetch data from local file
 fetch("./resources/data/data.json")
 	.then((response) => response.json())
@@ -9,10 +11,8 @@ fetch("./resources/data/data.json")
 		// Function to update grid items based on timeframe
 		function updateGridItems(timeframe) {
 			data.forEach((entry) => {
-				// Find the matching grid item based on title
 				const gridItem = document.querySelector(`.grid-item.${entry.title.toLowerCase()}-grid`);
 				if (gridItem) {
-					// Check if elements exist, then update text content dynamically
 					const currentOutput = gridItem.querySelector(".hour-text");
 					const previousOutput = gridItem.querySelector(".previous-text");
 
@@ -24,12 +24,19 @@ fetch("./resources/data/data.json")
 			});
 		}
 
+		// Function to handle button click
+		function handleButtonClick(selectedButton, timeframe) {
+			buttons.forEach((button) => button.classList.remove("button-selected")); // Remove class from all buttons
+			selectedButton.classList.add("button-selected"); // Add class to clicked button
+			updateGridItems(timeframe); // Update grid data
+		}
+
 		// Set default data to daily on page load
-		updateGridItems("daily");
+		handleButtonClick(daily_button, "daily");
 
 		// Event listeners for buttons
-		daily_button.addEventListener("click", () => updateGridItems("daily"));
-		weekly_button.addEventListener("click", () => updateGridItems("weekly"));
-		monthly_button.addEventListener("click", () => updateGridItems("monthly"));
+		daily_button.addEventListener("click", () => handleButtonClick(daily_button, "daily"));
+		weekly_button.addEventListener("click", () => handleButtonClick(weekly_button, "weekly"));
+		monthly_button.addEventListener("click", () => handleButtonClick(monthly_button, "monthly"));
 	})
 	.catch((error) => console.log("Error loading data:", error));
